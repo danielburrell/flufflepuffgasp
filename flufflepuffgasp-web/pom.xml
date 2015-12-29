@@ -3,7 +3,7 @@
     <parent>
         <groupId>uk.co.solong</groupId>
         <artifactId>flufflepuffgasp</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
     </parent>
     <artifactId>flufflepuffgasp-web</artifactId>
     <packaging>jar</packaging>
@@ -11,7 +11,7 @@
         <dependency>
             <groupId>uk.co.solong</groupId>
             <artifactId>flufflepuffgasp-core</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1</version>
         </dependency>
         <dependency>
 			<groupId>uk.co.solong</groupId>
