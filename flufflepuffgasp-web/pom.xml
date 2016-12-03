@@ -83,9 +83,9 @@
                                     <mapper>
                                         <type>perm</type>
                                         <prefix>/opt/solong/${project.artifactId}/${project.version}/bin</prefix>
-                                        <user>root</user>
-                                        <group>root</group>
-                                        <filemode>755</filemode>
+                                        <user>flufflepuffgasp</user>
+                                        <group>flufflepuffgasp</group>
+                                        <filemode>700</filemode>
                                     </mapper>
                                 </data>
                                 <data>
@@ -95,9 +95,9 @@
                                     <mapper>
                                         <type>perm</type>
                                         <prefix>/opt/solong/${project.artifactId}/${project.version}</prefix>
-                                        <user>root</user>
-                                        <group>root</group>
-                                        <filemode>644</filemode>
+                                        <user>flufflepuffgasp</user>
+                                        <group>flufflepuffgasp</group>
+                                        <filemode>600</filemode>
                                     </mapper>
                                 </data>
                                 <data>
@@ -122,7 +122,7 @@
                                     <symlink>true</symlink>
                                 </data>
                                 <data>
-                                    <src>src/deb/upstart/${project.artifactId}.conf</src>
+                                    <src>src/deb/systemd/${project.artifactId}.service</src>
                                     <type>file</type>
                                     <mapper>
                                         <type>perm</type>
@@ -133,6 +133,11 @@
                                     </mapper>
                                 </data>
                             </dataSet>
+                            <signPackage>${jdeb.signPackage}</signPackage>
+                            <keyring>${jdeb.keyring}</keyring>
+                            <key>${jdeb.key}</key>
+                            <signMethod>dpkg-sig</signMethod>
+                            <passphrase>${gpg.passphrase}</passphrase>
                         </configuration>
                     </execution>
                 </executions>
@@ -156,4 +161,33 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <!-- include sources -->
+                <plugins>
+                    <plugin>
+                        <groupId>uk.co.solong</groupId>
+                        <artifactId>gemfury-maven-plugin</artifactId>
+                        <version>0.0.10</version>
+                        <executions>
+                            <execution>
+                                <id>execution1</id>
+                                <phase>deploy</phase>
+                                <configuration>
+                                    <token>${secrettoken}</token>
+                                    <ignoreHttpsCertificateWarnings>true</ignoreHttpsCertificateWarnings>
+                                </configuration>
+                                <goals>
+                                    <goal>gemfury</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

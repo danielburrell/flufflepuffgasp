@@ -1,0 +1,11 @@
+[Unit]
+Description=FlufflePuffGasp webservice
+After=network.target
+
+[Service]
+User=flufflepuffgasp
+Type=simple
+ExecStart=/opt/solong/flufflepuffgasp/current/bin/start
+
+[Install]
+WantedBy=multi-user.target

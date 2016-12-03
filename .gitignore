@@ -16,3 +16,5 @@ flufflepuffgasp-core/.classpath
 .project
 .settings
 .classpath
+.idea/
+*.iml
