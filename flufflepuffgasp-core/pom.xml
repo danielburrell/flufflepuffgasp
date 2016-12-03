@@ -7,4 +7,8 @@
     </parent>
     <artifactId>flufflepuffgasp-core</artifactId>
     <packaging>jar</packaging>
+
+  <scm>
+    <tag>flufflepuffgasp-0.0.1</tag>
+  </scm>
 </project>
