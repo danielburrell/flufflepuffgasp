@@ -97,5 +97,4 @@
         <developerConnection>scm:git:git@github.com:danielburrell/flufflepuffgasp.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-    <url>www.solong.co.uk/flufflepuffgasp</url>
 </project>
