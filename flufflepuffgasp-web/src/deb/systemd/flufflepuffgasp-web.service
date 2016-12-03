@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=flufflepuffgasp
 Type=simple
-ExecStart=/opt/solong/flufflepuffgasp/current/bin/start
+ExecStart=/opt/solong/flufflepuffgasp-web/current/bin/start
 
 [Install]
 WantedBy=multi-user.target
