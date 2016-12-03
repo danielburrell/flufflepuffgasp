@@ -3,12 +3,9 @@
     <parent>
         <groupId>uk.co.solong</groupId>
         <artifactId>flufflepuffgasp</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.2-SNAPSHOT</version>
     </parent>
     <artifactId>flufflepuffgasp-core</artifactId>
+  <version>0.0.1</version>
     <packaging>jar</packaging>
-
-  <scm>
-    <tag>flufflepuffgasp-0.0.1</tag>
-  </scm>
 </project>
